@@ -1,9 +1,7 @@
 import sys, math
 
-def divisible_by_two(number):
-    #print('entered divisible', number)
-    if number/2 % 2 != 0:
-        #print('returned num', number/2)
+def divisible_by_two(number): #check for power of two
+    if number/2 % 2 != 0
         return int(number/2)
     else:
         return divisible_by_two(number/2)
@@ -15,9 +13,8 @@ def factorization(number):
     sqrt_n = math.sqrt(number)
     while i <= sqrt_n and number % i != 0:
         i += 2
-    if i > sqrt_n:
+    if i > sqrt_n: #if i reaches sqrt_n, then no further factors
         #print('i, sqrt_n', i, sqrt_n)
-        #print('final return', number)
         return number
     else:
         #print('recursive return', number//i)
@@ -28,8 +25,6 @@ def factorization(number):
 t = int(input().strip())
 for a0 in range(t):
     n = int(input().strip())
-    
-    #factor_list = []
     
     if n % 2 == 0:
         n = divisible_by_two(n)
